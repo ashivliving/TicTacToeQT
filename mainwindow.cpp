@@ -88,6 +88,9 @@ void MainWindow::updateBoard()
     ui->spot_20->setText(QString(grid[2][0]));
     ui->spot_21->setText(QString(grid[2][1]));
     ui->spot_22->setText(QString(grid[2][2]));
+    ui->spot_20->setText(QString(grid[3][0]));
+    ui->spot_21->setText(QString(grid[3][1]));
+    ui->spot_22->setText(QString(grid[3][2]));
 
     if (gridWin[0][0] == true)
         ui->spot_00->setStyleSheet("background-color: #6edda4");
@@ -122,6 +125,18 @@ void MainWindow::updateBoard()
     else
         ui->spot_21->setStyleSheet("");
     if (gridWin[2][2] == true)
+        ui->spot_22->setStyleSheet("background-color: #6edda4");
+    else
+        ui->spot_22->setStyleSheet("");
+    if (gridWin[3][0] == true)
+        ui->spot_20->setStyleSheet("background-color: #6edda4");
+    else
+        ui->spot_20->setStyleSheet("");
+    if (gridWin[3][1] == true)
+        ui->spot_21->setStyleSheet("background-color: #6edda4");
+    else
+        ui->spot_21->setStyleSheet("");
+    if (gridWin[3][2] == true)
         ui->spot_22->setStyleSheet("background-color: #6edda4");
     else
         ui->spot_22->setStyleSheet("");
